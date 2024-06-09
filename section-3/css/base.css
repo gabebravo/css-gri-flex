@@ -57,6 +57,9 @@ a:hover {
 .grid {
   display: grid;
   grid-template: 100px 200px / 200px auto 150px; /* short-hand way of defining : rows / columns */
+  /* grid-row-gap: 10px;
+  grid-column-gap: 20px; */
+  grid-gap: 10px 20px; /* short-hand way of defining : row-gap column-gap */
 }
 
 .grid > * {
@@ -80,19 +83,30 @@ a:hover {
 
 /* ____________________________________________________________________________________- */
 
+/* make a 3 x 3 grid - the 4th row will be auto placed by the grid */
 .gb-grid-layout {
   margin-top: 10px;
   display: grid;
   grid-template: 300px 300px 300px / 100px auto 200px;
+  grid-gap: 1px;
 }
 
+/* This just makes each item automatically grid ready */
 .gb-grid-item {
   background: #fff;
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid rgba(000, 0, 0, 0.5);
+  display: grid;
+  grid-row-gap: 1px;
 }
 
+/* This is the auto placed grid row and we are saying to span the width of the 3 rows above it */
 .gb-grid-item:nth-child(4) {
   grid-column: auto / span 3;
   height: 100px;
+}
+
+.gb-grid-item-row {
+  background: #fff;
+  color: #000;
 }
