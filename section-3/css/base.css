@@ -78,3 +78,16 @@ a:hover {
   text-decoration: none;
   transition: background-color ease 0.5s;
 }
+
+/* ____________________________________________________________________________________- */
+
+:root {
+  --random: '#1e90ff';
+}
+
+.gb-grid-layout {
+  display: grid;
+  background-color: '#' + Math.floor(Math.random() * 16777215) .toString(16);
+}
+
+/* Math.floor(Math.random()*16777215).toString(16); */
