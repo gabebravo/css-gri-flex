@@ -51,8 +51,13 @@ a:hover {
   margin-bottom: 50px;
 }
 
+/* SECTION 3 : this gris is 2 rows and 3 columns 
+    NOTES : auto = span the remaining space 
+*/
 .grid {
   display: grid;
+  grid-template-rows: 100px 200px; /* this is the height of the row */
+  grid-template-columns: 200px auto 150px; /* this is the width of the column */
 }
 
 .grid > * {
