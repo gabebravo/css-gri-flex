@@ -1,0 +1,31 @@
+/* Put your code here */
+
+.container {
+  display: grid;
+  margin: 0 auto;
+  max-width: 60%;
+  position: relative;
+  top: 15vh;
+  grid-template-columns: auto;
+  grid-template-rows: 50px 175px 100px;
+  grid-gap: 5px;
+}
+
+.middle {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 65% 34%;
+}
+
+.header {
+  background-color: aqua;
+}
+.left {
+  background-color: darkcyan;
+}
+.right {
+  background-color: palevioletred;
+}
+.footer {
+  background-color: gray;
+}
