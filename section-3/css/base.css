@@ -65,7 +65,6 @@ a:hover {
   border: 1px solid #fff;
   border-radius: 2px;
   padding: 20px;
-  /*margin: 10px;*/
   text-align: center;
 }
 
@@ -81,13 +80,19 @@ a:hover {
 
 /* ____________________________________________________________________________________- */
 
-:root {
-  --random: '#1e90ff';
-}
-
 .gb-grid-layout {
+  margin-top: 10px;
   display: grid;
-  background-color: '#' + Math.floor(Math.random() * 16777215) .toString(16);
+  grid-template: 300px 300px 300px / 100px auto 200px;
 }
 
-/* Math.floor(Math.random()*16777215).toString(16); */
+.gb-grid-item {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.gb-grid-item:nth-child(4) {
+  grid-column: auto / span 3;
+  height: 100px;
+}
